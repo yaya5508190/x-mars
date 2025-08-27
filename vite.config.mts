@@ -41,17 +41,6 @@ export default defineConfig({
       },
     }),
   ],
-  build: {
-    cssCodeSplit: false,
-  },
-  css: {
-    // 自定义处理器返回空字符串，相当于丢弃所有样式
-    preprocessorOptions: {
-      css: { additionalData: '' },
-      scss: { additionalData: '' },
-      sass: { additionalData: '' },
-    }
-  },
   optimizeDeps: {
     exclude: ['vuetify'],
   },
@@ -83,5 +72,11 @@ export default defineConfig({
         api: 'modern-compiler',
       },
     },
+  },
+  base: '/943a6b1b-222a-4e99-b900-3744270480e6/',
+  build: {
+    target: 'esnext' ,
+    outDir: 'dist',
+    assetsDir: '',   // 👈 静态资源直接输出在 dist 根目录
   },
 })
