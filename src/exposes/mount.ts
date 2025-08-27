@@ -4,12 +4,10 @@ import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import Root from './RemoteRoot.vue'
-import 'vuetify/styles'
-import '@mdi/font/css/materialdesignicons.css'
 
 let app: ReturnType<typeof createApp> | null = null
 
-export function mount (el: Element, props?: Record<string, any>, vuetify: any) {
+export function mount (el: Element, props?: Record<string, any>, vuetify?: any) {
   if (app) {
     return
   }

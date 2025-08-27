@@ -41,6 +41,17 @@ export default defineConfig({
       },
     }),
   ],
+  build: {
+    cssCodeSplit: false,
+  },
+  css: {
+    // 自定义处理器返回空字符串，相当于丢弃所有样式
+    preprocessorOptions: {
+      css: { additionalData: '' },
+      scss: { additionalData: '' },
+      sass: { additionalData: '' },
+    }
+  },
   optimizeDeps: {
     exclude: ['vuetify'],
   },
